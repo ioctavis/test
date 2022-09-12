@@ -1,0 +1,18 @@
+onComment:
+  set:
+    - WIP
+
+onApproved:
+  remove:
+    - WIP
+  set:
+    - First review
+    - Ready to merge
+
+onChangesRequested:
+  remove:
+    - Ready to merge
+    - Waiting 1st review
+    - Waiting 2nd review
+  set:
+    - WIP
