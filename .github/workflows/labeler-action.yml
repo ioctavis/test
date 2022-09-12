@@ -1,6 +1,6 @@
 name: Assign Comment; Approved or Changes Requested labels when pull request is reviewed
 
-on: [pull_request_review, pull_request_review_comment]
+on: [pull_request, pull_request_review, pull_request_review_comment]
 
 jobs:
   triage:
