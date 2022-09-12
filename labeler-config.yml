@@ -4,6 +4,18 @@ onComment:
     - Changes Requested
   set:
     - Comment
+    
+onOpen:
+  set:
+    - Open
+    
+onMerged:
+  set:
+    - Merged
+    
+onClosed:
+  set:
+    - Closed
 
 onApproved:
   remove:
