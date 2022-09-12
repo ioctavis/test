@@ -1,18 +1,20 @@
 onComment:
+  remove:
+    - Approved
+    - Changes Requested
   set:
-    - WIP
+    - Comment
 
 onApproved:
   remove:
-    - WIP
+    - Comment
+    - Changes Requested
   set:
-    - First review
-    - Ready to merge
+    - Approved
 
 onChangesRequested:
   remove:
-    - Ready to merge
-    - Waiting 1st review
-    - Waiting 2nd review
+    - Comment
+    - Approved
   set:
-    - WIP
+    - Changes Requested
