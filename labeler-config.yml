@@ -9,11 +9,11 @@ onOpen:
   set:
     - Open
     
-onMerged:
+onMerge:
   set:
     - Merged
     
-onClosed:
+onClose:
   set:
     - Closed
 

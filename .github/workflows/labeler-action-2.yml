@@ -1,13 +1,14 @@
-name: Assign work in progress label when pull request is updated
-on: [pull_request]
+name: estrada9166/labeler
+
+on: [pull_request_review, pull_request_review_comment]
+
 jobs:
-  working_label:
+  triage:
     runs-on: ubuntu-latest
-    name: Label working progress
     steps:
-      - uses: AlbertHernandez/working-label-action@v1.0.3
+      - uses: actions/checkout@master
+      - name: Labeler
+        uses: estrada9166/labeler
         with:
-          work_in_progress_label: "Work in progress"
-          ready_to_review_label: "Ready to review"
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          CONFIG_PATH: labeler-config.yml
