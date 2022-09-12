@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Labeler
-        uses: estrada9166/labeler@v1
+        uses: igoroctaviano/workflow-pr-labeler@v1
         with:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           CONFIG_PATH: labeler-config.yml
