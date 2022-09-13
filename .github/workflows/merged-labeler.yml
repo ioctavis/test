@@ -1,4 +1,4 @@
-name: workflow-pr-labeler-for-merged-prs
+name: merged-labeler
 
 on:
   pull_request:
