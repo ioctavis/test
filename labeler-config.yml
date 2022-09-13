@@ -1,22 +1,22 @@
 createLabels:
-- name: Approved
-  description: Approved
-  color: '#01AEEB'
-- name: Changes Requested
-  description: Approved
-  color: '#01AEEB'
-- name: Comment
-  description: Approved
-  color: '#01AEEB'
-- name: Open
-  description: Open
-  color: '#01AEEB'
-- name: Closed
-  description: Closed
-  color: '#01AEEB'
- - name: Merged
-  description: Merged
-  color: '#01AEEB'
+  - name: Approved
+    description: Approved
+    color: '#01AEEB'
+  - name: Changes Requested
+    description: Approved
+    color: '#01AEEB'
+  - name: Comment
+    description: Approved
+    color: '#01AEEB'
+  - name: Open
+    description: Open
+    color: '#01AEEB'
+  - name: Closed
+    description: Closed
+    color: '#01AEEB'
+   - name: Merged
+    description: Merged
+    color: '#01AEEB'
 
 onComment:
   remove:
