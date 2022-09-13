@@ -8,13 +8,9 @@ createLabels:
   - name: Resolved
     description: Approved
     color: '#01AEEB'
-  - name: Failed
-    description: Failed
-    color: '#01AEEB'
 
 onComment:
   remove:
-    - Failed
     - Pull Request
     - Resolved
   set:
@@ -22,7 +18,6 @@ onComment:
 
 onApprove:
   remove:
-    - Failed
     - Working on it
     - Pull Request
   set:
@@ -30,7 +25,6 @@ onApprove:
 
 onChangeRequest:
   remove:
-    - Failed
     - Approved
     - Pull Request
   set:
@@ -42,7 +36,6 @@ onOpen:
 
 onMerge:
   remove:
-    - Failed
     - Working on it
     - Pull Request
   set:
@@ -50,8 +43,7 @@ onMerge:
 
 onClose:
   remove:
-    - Working on it
     - Pull Request
     - Resolved
   set:
-    - Failed
+    - Working on it
