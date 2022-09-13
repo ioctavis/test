@@ -5,7 +5,7 @@ on:
     types: [review_requested]
 
 jobs:
-  triage:
+  review-requested-action:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
