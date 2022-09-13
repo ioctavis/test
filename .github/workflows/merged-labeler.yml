@@ -9,7 +9,7 @@ on:
     types: [closed]
 
 jobs:
-  after-merge-action:
+  merged-action:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
