@@ -1,13 +1,13 @@
 createLabels:
   - name: Working on it
     description: Working on it
-    color: '#01AEEB'
+    color: 01AEEB
   - name: Pull Request
     description: Pull Request
-    color: '#01AEEB'
+    color: 01AEEB
   - name: Resolved
     description: Resolved
-    color: '#01AEEB'
+    color: 01AEEB
 
 onReviewPending:
   remove:
