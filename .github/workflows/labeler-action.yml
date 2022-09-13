@@ -12,3 +12,15 @@ jobs:
         with:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           CONFIG_PATH: labeler-config.yml
+
+jobs:
+  after-merge-action:
+    if: ${{ github.event.pull_request.merged }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Workflow PR Labeler
+        uses: igoroctaviano/workflow-pr-labeler@master
+        with:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          CONFIG_PATH: labeler-config.yml
