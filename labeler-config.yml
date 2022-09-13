@@ -16,6 +16,13 @@ onReviewPending:
   set:
     - Pull Request
 
+onClose:
+  remove:
+    - Resolved
+    - Pull Request
+  set:
+    - Working on it
+
 onOpen:
   remove:
     - Resolved
