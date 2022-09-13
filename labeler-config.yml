@@ -22,6 +22,13 @@ onOpen:
     - Working on it
   set:
     - Pull Request
+    
+onMerge:
+  remove:
+    - Working on it
+    - Pull Request
+  set:
+    - Resolved
 
 onComment:
   remove:
