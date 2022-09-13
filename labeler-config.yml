@@ -45,6 +45,7 @@ onOpen:
 
 onMerge:
   remove:
+    - Closed
     - Open
     - Comment
     - Approved
@@ -54,6 +55,7 @@ onMerge:
 
 onClose:
   remove:
+    - Merged
     - Open
     - Comment
     - Approved
