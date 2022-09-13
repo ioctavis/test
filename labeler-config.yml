@@ -4,18 +4,6 @@ onComment:
     - Changes Requested
   set:
     - Comment
-    
-onOpen:
-  set:
-    - Open
-    
-onMerge:
-  set:
-    - Merged
-    
-onClose:
-  set:
-    - Closed
 
 onApproved:
   remove:
@@ -26,7 +14,19 @@ onApproved:
 
 onChangesRequested:
   remove:
-    - Comment
+    - Commented
     - Approved
   set:
     - Changes Requested
+
+onOpen:
+  set:
+    - Open
+
+onMerge:
+  set:
+    - Merged
+
+onClose:
+  set:
+    - Closed

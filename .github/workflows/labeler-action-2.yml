@@ -1,6 +1,6 @@
 name: estrada9166/labeler
 
-on: [pull_request_review, pull_request_review_comment]
+on: [pull_request, pull_request_review, pull_request_review_comment]
 
 jobs:
   triage:
@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Labeler
-        uses: estrada9166/labeler
+        uses: estrada9166/labeler@v1
         with:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           CONFIG_PATH: labeler-config.yml
