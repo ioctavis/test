@@ -14,7 +14,7 @@ createLabels:
   - name: Closed
     description: Closed
     color: '#01AEEB'
-   - name: Merged
+  - name: Merged
     description: Merged
     color: '#01AEEB'
 
