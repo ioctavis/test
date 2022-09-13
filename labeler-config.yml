@@ -1,13 +1,27 @@
 createLabels:
   - name: Working on it
-    description: Approved
+    description: Working on it
     color: '#01AEEB'
   - name: Pull Request
-    description: Approved
+    description: Pull Request
     color: '#01AEEB'
   - name: Resolved
-    description: Approved
+    description: Resolved
     color: '#01AEEB'
+
+onReviewPending:
+  remove:
+    - Working on it
+    - Resolved
+  set:
+    - Pull Request
+
+onOpen:
+  remove:
+    - Resolved
+    - Working on it
+  set:
+    - Pull Request
 
 onComment:
   remove:
@@ -16,34 +30,9 @@ onComment:
   set:
     - Working on it
 
-onApprove:
-  remove:
-    - Working on it
-    - Pull Request
-  set:
-    - Resolved
-
 onChangeRequest:
   remove:
-    - Approved
-    - Pull Request
-  set:
-    - Working on it
-
-onOpen:
-  set:
-    - Pull Request
-
-onMerge:
-  remove:
-    - Working on it
-    - Pull Request
-  set:
     - Resolved
-
-onClose:
-  remove:
     - Pull Request
-    - Resolved
   set:
     - Working on it
