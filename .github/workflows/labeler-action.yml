@@ -1,4 +1,4 @@
-name: workflow-pr-labeler@v1
+name: workflow-pr-labeler@v2
 
 on: [pull_request, pull_request_review, pull_request_review_comment]
 
@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Labeler
-        uses: igoroctaviano/workflow-pr-labeler@v1
+        uses: igoroctaviano/workflow-pr-labeler@v2
         with:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           CONFIG_PATH: labeler-config.yml
