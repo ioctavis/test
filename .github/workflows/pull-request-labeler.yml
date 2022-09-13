@@ -3,7 +3,7 @@ name: pull-request-labeler
 on: [pull_request, pull_request_review, pull_request_review_comment]
 
 jobs:
-  triage:
+  pull-request-action:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
