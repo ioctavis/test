@@ -10,7 +10,5 @@ jobs:
       - name: Workflow PR Labeler
         uses: igoroctaviano/workflow-pr-labeler@master
         with:
-          fetch-depth: 0
-          ref: master
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           CONFIG_PATH: labeler-config.yml
