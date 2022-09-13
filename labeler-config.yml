@@ -1,64 +1,57 @@
 createLabels:
-  - name: Approved
+  - name: Working on it
     description: Approved
     color: '#01AEEB'
-  - name: Changes Requested
+  - name: Pull Request
     description: Approved
     color: '#01AEEB'
-  - name: Comment
+  - name: Resolved
     description: Approved
     color: '#01AEEB'
-  - name: Open
-    description: Open
-    color: '#01AEEB'
-  - name: Closed
-    description: Closed
-    color: '#01AEEB'
-  - name: Merged
-    description: Merged
+  - name: Failed
+    description: Failed
     color: '#01AEEB'
 
 onComment:
   remove:
-    - Approved
-    - Changes Requested
+    - Failed
+    - Pull Request
+    - Resolved
   set:
-    - Comment
+    - Working on it
 
 onApprove:
   remove:
-    - Comment
-    - Changes Requested
+    - Failed
+    - Working on it
+    - Pull Request
   set:
-    - Approved
+    - Resolved
 
 onChangeRequest:
   remove:
-    - Comment
+    - Failed
     - Approved
+    - Pull Request
   set:
-    - Changes Requested
+    - Working on it
 
 onOpen:
   set:
-    - Open
+    - Pull Request
 
 onMerge:
   remove:
-    - Closed
-    - Open
-    - Comment
-    - Approved
-    - Changes Requested
+    - Failed
+    - Working on it
+    - Pull Request
   set:
-    - Merged
+    - Resolved
 
 onClose:
   remove:
-    - Merged
-    - Open
-    - Comment
-    - Approved
-    - Changes Requested
+    - Working on it
+    - Pull Request
+    - Resolved
   set:
-    - Closed
+    - Failed
