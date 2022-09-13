@@ -5,14 +5,14 @@ onComment:
   set:
     - Comment
 
-onApproved:
+onApprove:
   remove:
     - Comment
     - Changes Requested
   set:
     - Approved
 
-onChangesRequested:
+onChangeRequest:
   remove:
     - Commented
     - Approved
